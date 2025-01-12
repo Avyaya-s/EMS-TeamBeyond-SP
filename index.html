@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Energy Management System</title>
+    <style>
+        
+        html, body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F5EFE7;
+            color: #213555;
+            line-height: 1.6;
+            height: 100%;
+            display: flex, inline;
+            flex-direction: column;
+        }
+
+        
+        .header {
+            background-color: #213555;
+            color: #F5EFE7;
+            text-align: center;
+            padding: 20px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        .header h2 {
+            margin-top: 10px;
+            font-size: 1.5rem;
+            color: #D8C4B6;
+            font-style: italic;
+        }
+
+       
+        .tiles-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 20px auto;
+            gap: 15px;
+            width: 90%;
+        }
+
+        .tile2 {
+            background-color: #D8C4B6;
+            flex: 1 1 calc(30% - 15px);
+            padding: 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            color: #213555;
+            text-align: center;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .tile2:hover {
+            background-color: #3E5879;
+            color: #F5EFE7;
+        }
+
+        .tile2 h2 {
+            margin: 0;
+            font-size: 1.2rem;
+        }
+
+        
+        .images-container {
+            display: flex;
+            justify-content: space-evenly; 
+            align-items: center;
+            flex-wrap: wrap; 
+            margin: 20px auto;
+            gap: 15px;
+            width: 90%;
+        }
+
+        .images-container img {
+            border-radius: 20px;
+            max-width: 30%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        #qrmedia {
+            max-width: 40%; 
+        }
+
+       
+        .dropdown {
+            margin: 20px auto;
+            text-align: center;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+       
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #213555;
+            color: #F5EFE7;
+            position: relative;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+    
+        @media (max-width: 768px) {
+            .tiles-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .tile2 {
+                flex: 1 1 100%;
+                max-width: 300px;
+            }
+
+            .images-container img {
+                max-width: 40%; 
+            }
+
+            #qrmedia {
+                max-width: 60%; 
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header h1 {
+                font-size: 1.5rem;
+            }
+
+            .header h2 {
+                font-size: 1rem;
+            }
+
+            .tile2 {
+                padding: 15px;
+                font-size: 1rem;
+            }
+
+            .images-container img {
+                max-width: 80%; 
+            }
+
+            footer {
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Energy Management System</h1>
+        <h2>Welcome to the Energy Management System (EMS) Dashboard!</h2>
+    </header>
+
+   
+    <div class="tiles-container">
+        <div class="tile2" onclick="location.href='./public/introtoems.html'">
+            <h2>Intro to EMS</h2>
+        </div>
+        <div class="tile2" onclick="location.href='./public/aboutproject.html'">
+            <h2>About Project</h2>
+        </div>
+        <div class="tile2" onclick="location.href='./public/aboutus.html'">
+            <h2>About Us</h2>
+        </div>
+    </div>
+
+   
+    <div class="images-container">
+        <img src="./media/1.jpg" id="img1" alt="Image 1">
+        <img src="./media/qrmedia.png" id="qrmedia" alt="QR Media">
+        <img src="./media/2.jpg" id="img2" alt="Image 2">
+    </div>
+
+   
+    <div class="dropdown">
+        <button>Dropdown Menu</button>
+        <div class="dropdown-content">
+            <a href="https://blr1.blynk.cloud/dashboard/405901/global/devices/1/organization/405901/devices/1404594/dashboard">Bulb</a>
+            <a href="https://blr1.blynk.cloud/dashboard/405901/global/devices/1/organization/405901/devices/1404595/dashboard">Fan</a>
+            <a href="https://blr1.blynk.cloud/dashboard/405901/global/devices/1/organization/405901/devices/1404621/dashboard">Air Conditioner</a>
+            <a href="https://blr1.blynk.cloud/dashboard/405901/global/devices/1/organization/405901/devices/1404624/dashboard">Geyser</a>
+            <a href="https://blr1.blynk.cloud/dashboard/405901/global/devices/1/organization/405901/devices/1404628/dashboard">Television</a>
+            <a href="https://blr1.blynk.cloud/dashboard/405901/global/devices/1">Refrigerator</a>
+        </div>
+    </div>
+
+    <footer>©Team Beyond - 1st Sem 2024</footer>
+</body>
+</html>
