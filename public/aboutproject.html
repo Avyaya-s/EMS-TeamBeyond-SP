@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Project</title>
+    <style>
+       
+        html, body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F5EFE7;
+            color: #213555;
+            line-height: 1.6;
+        }
+
+       
+        header {
+            background-color: #213555;
+            color: #F5EFE7;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            margin: 5px 0 0;
+            font-size: 1rem;
+            font-style: italic;
+            color: #D8C4B6;
+        }
+
+        
+        h2 {
+            color: #3E5879;
+            margin: 20px 0 10px;
+            font-size: 1.5rem;
+        }
+
+        p, li {
+            font-size: 1rem;
+        }
+
+        ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+
+        img {
+            border-radius: 10px;
+            max-width: 100%;
+            height: auto;
+            margin: 10px auto;
+            display: block;
+        }
+
+        #acs, #qrP2 {
+            max-width: 50%;
+            margin: 10px auto;
+            display: block;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background: #D8C4B6;
+            margin: 20px 0;
+        }
+
+       
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #213555;
+            color: #F5EFE7;
+            position: relative;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+
+            h2 {
+                font-size: 1.2rem;
+            }
+
+            p, li {
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                padding: 15px;
+            }
+
+            header h1 {
+                font-size: 1.2rem;
+            }
+
+            header p {
+                font-size: 0.9rem;
+            }
+
+            h2 {
+                font-size: 1rem;
+            }
+
+            p, li {
+                font-size: 0.8rem;
+            }
+
+            #acs, #qrP2 {
+                max-width: 70%;
+            }
+
+            footer {
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>About Our Energy Management System</h1>
+        <p>Empowering sustainable energy practices through innovation and technology</p>
+    </header>
+    <h2>Our Mission</h2>
+    <p>To develop a reliable and intuitive energy management system that empowers users to monitor, optimize, and save energy efficiently.</p>
+    <hr/>
+    <h2>Did We Face any Challenges?</h2>
+    <ul>
+        <li>Component Variability: Different circuits required different components, complicating the design process.</li>
+        <li>Wrong configuration of bulb and holders.</li>
+        <li>Loose Connections: Encountered loose connections at multiple points.</li>
+        <li>Damaged Sensor: A spark ignited during testing, which led to the failure of the ACS712 sensor.</li>
+        <li>Wrong Choice of sensor: We chose ACS712 instead of a contactless SCT013 current sensor.</li>
+    </ul>
+    <hr/>
+    <img id="acs" src="../media/BurntACS.jpg" alt="Burnt ACS Sensor"/>
+    <h2>Tools and Softwares Used:</h2>
+    <ul>
+        <li>SCT013 current sensor</li>
+        <li>ZMPT010b voltage sensor</li>
+        <li>ESP32 Microcontroller</li>
+        <li>Arduino IDE</li>
+        <li>Blynk platform</li>
+        <li>VS Code for Developing website</li>
+    </ul>
+    <hr/>
+    <img src="../media/qrP2.png" id="qrP2" alt="QR Code for Phase 2 Results"/>
+    <h2>Partial Results (till Phase 2):</h2>
+    <ul>
+        <li><strong>ACS-712 (5A) Current Sensor Circuit:</strong> Results weren’t entirely accurate.</li>
+        <li><strong>ZMPT101B Voltage Sensor Circuit:</strong> Results weren’t perfect, but close.</li>
+        <li><strong>Blynk Dashboard:</strong> Successfully created a dashboard for real-time monitoring and control.</li>
+    </ul>
+    <hr/>
+    <footer>©Team Beyond - 1st Sem 2024</footer>
+</body>
+</html>
